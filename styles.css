@@ -1,0 +1,90 @@
+
+:root{
+  --bg:#5A45D6;
+  --primary:#FF0032;
+  --text:#111827;
+  --muted:#6B7280;
+  --light:#F7F7FA;
+  --panel:#F4F4F6;
+  --border:#D7DBE3;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+button,input{font:inherit}
+.app-shell{min-height:100vh;padding:12px}
+.layout{max-width:1280px;margin:0 auto;display:grid;gap:16px}
+.main{display:flex;justify-content:center}
+.phone-frame{width:100%;max-width:460px;background:var(--panel);border-radius:28px;padding:12px;box-shadow:0 20px 50px rgba(0,0,0,.24)}
+.phone-screen{background:var(--light);border-radius:24px;padding:16px;min-height:760px}
+.screen{display:none;min-height:700px}
+.screen.active{display:flex;flex-direction:column}
+.centered{display:flex;flex:1;flex-direction:column;justify-content:center}
+.logo-wrap{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:32px}
+.mts-logo{position:relative;width:64px;height:64px;background:var(--primary);overflow:hidden;border-radius:4px;color:#fff}
+.mts-logo .m{position:absolute;left:8px;top:4px;font-weight:700;font-size:26px}
+.mts-logo .t{position:absolute;right:8px;top:4px;font-weight:700;font-size:26px}
+.mts-logo .c{position:absolute;right:12px;bottom:2px;font-weight:700;font-size:26px}
+.id-logo{font-size:52px;color:#1f2329}
+h1,h2{margin:0 0 24px}
+h1{font-size:36px;line-height:1.15;text-align:center}
+h2{font-size:32px}
+.lead,.hint,.section-meta,.small-muted{color:var(--muted)}
+.lead{text-align:center;font-size:24px;margin:0 0 32px}
+.field label,.field-label{display:block;font-size:14px;color:var(--muted);margin-bottom:8px}
+.field{border-radius:28px;border:2px solid var(--border);background:#ECEEF2;padding:20px 24px;box-shadow:inset 0 2px 8px rgba(0,0,0,.04)}
+.phone-input-wrap,.amount-input-wrap{display:flex;align-items:center;gap:12px}
+.prefix{font-size:36px;color:#77808E}
+#phoneInput,#amountInput{flex:1;border:none;background:transparent;outline:none;font-size:32px;color:#1f2329}
+#phoneInput::placeholder,#amountInput::placeholder{color:#A0A8B3}
+.btn{border:none;cursor:pointer;border-radius:24px;padding:16px 20px;font-weight:700}
+.btn:disabled{cursor:not-allowed}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:disabled{background:#DFE2E8;color:#AEB5BF}
+.btn-lg{padding:22px 24px;text-transform:uppercase;letter-spacing:.04em}
+.btn-secondary{background:#fff;border:1px solid #e2e8f0;color:#111827}
+.btn-ghost{background:#fff;color:#334155;padding:10px 16px;border-radius:16px;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.screen-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+.pill{background:#fff;padding:10px 16px;border-radius:16px;font-size:14px;font-weight:600;color:#334155;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.section-title-small{font-size:14px;color:var(--muted);margin-bottom:6px}
+.wallet-card{margin-bottom:24px;padding:24px;border-radius:32px;color:#fff;background:linear-gradient(135deg,#1B1E28,#2A2E3A,#4A4F63);box-shadow:0 16px 30px rgba(0,0,0,.2)}
+.wallet-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:44px}
+.wallet-label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.wallet-balance{font-size:42px;font-weight:700;margin-top:8px}
+.wallet-chip{padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.1);font-size:14px}
+.wallet-payment-number{font-size:14px;color:rgba(255,255,255,.8)}
+.actions-grid{display:grid;gap:12px;grid-template-columns:1fr 1fr;margin-bottom:24px}
+.card{background:#fff;border-radius:24px;padding:16px;box-shadow:0 12px 24px rgba(148,163,184,.14)}
+.history-head{display:flex;justify-content:space-between;gap:12px;align-items:center}
+#historyList{display:grid;gap:12px}
+.history-item{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:16px;background:#f8fafc;border-radius:18px}
+.history-title{font-weight:600}
+.history-subtitle{font-size:14px;color:var(--muted);white-space:pre-line}
+.history-amount{font-weight:700;white-space:nowrap}
+.history-amount.positive{color:#059669}
+.otp-row{display:flex;justify-content:center;gap:16px;margin-bottom:32px}
+.otp-input{width:80px;height:96px;border-radius:28px;border:2px solid var(--border);background:#ECEEF2;text-align:center;font-size:42px;outline:none;color:#6B7280}
+.otp-input:focus{border-color:#1E6FFF}
+.link-btn{border:none;background:transparent;color:#1E6FFF;font-size:28px;cursor:pointer;margin:0 auto 32px}
+.error-text{min-height:20px;text-align:center;color:#ef4444;font-size:14px;margin-bottom:10px}
+.source-option{width:100%;border:1px solid #e2e8f0;border-radius:24px;padding:16px;background:#f8fafc;display:flex;justify-content:space-between;gap:12px;align-items:center;cursor:pointer;margin-top:12px}
+.source-option.active{border-color:var(--primary);background:#FFF4F6}
+.source-left{display:flex;gap:12px;align-items:center}
+.source-icon{width:44px;height:44px;border-radius:16px;background:#fff;display:grid;place-items:center;color:#475569}
+.image-icon img{width:20px;height:20px;object-fit:contain}
+.source-title{font-weight:600}
+.source-subtitle{font-size:14px;color:var(--muted)}
+.source-radio{font-size:20px;color:#94a3b8}
+.source-option.active .source-radio{color:var(--primary)}
+.offer-card{max-height:520px;overflow:auto;line-height:1.65}
+.offer-card p{margin:0 0 16px}
+@media (max-width:640px){
+  .phone-screen{min-height:680px;padding:14px}
+  .screen{min-height:620px}
+  h1{font-size:28px}
+  h2{font-size:26px}
+  .wallet-balance{font-size:34px}
+  .actions-grid{grid-template-columns:1fr}
+  .otp-input{width:64px;height:80px;font-size:34px;border-radius:20px}
+  .link-btn{font-size:22px}
+  #phoneInput,#amountInput{font-size:26px}
+}
