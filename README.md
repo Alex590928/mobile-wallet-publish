@@ -1,12 +1,24 @@
-# Mobile Wallet Publish
+# Mobile Wallet Web Latest
 
-Готовый статический проект для публикации на Vercel.
+Последняя веб-версия без мобильной рамки.
 
-## Локальный запуск
-
-Открой `index.html` в браузере или запусти:
+## Запуск локально
 
 ```bash
-python -m http.server 8080
+npm install
+npm run dev
 ```
 
+## Сборка
+
+```bash
+npm run build
+```
+
+## Публикация на Vercel
+
+1. Загрузите проект в GitHub.
+2. Подключите репозиторий в Vercel.
+3. Framework Preset: Vite.
+4. Build Command: `npm run build`.
+5. Output Directory: `dist`.
